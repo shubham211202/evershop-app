@@ -1,13 +1,12 @@
-import Editor from '@components/common/Editor';
+import { Editor } from '@components/common/Editor';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export default function Description({ product: { description } }) {
   return (
-    <div className="mt-8 md:mt-12">
+    <div className="mt-5 md:mt-7">
       <div className="product-description">
         <Editor rows={description} />
-        bb
       </div>
     </div>
   );

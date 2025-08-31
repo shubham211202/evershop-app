@@ -14,7 +14,7 @@ import { useQuery } from 'urql';
 
 import './CheckoutForm.scss';
 import RenderIfTrue from '@components/common/RenderIfTrue';
-import Spinner from '@components/common/Spinner';
+import Spinner from '@components/admin/Spinner';
 import { _ } from '../../../../lib/locale/translate/_.js';
 import TestCards from './TestCards';
 
@@ -164,7 +164,7 @@ export default function CheckoutForm({
 
   if (result.error) {
     return (
-      <div className="flex p-8 justify-center items-center text-critical">
+      <div className="flex p-5 justify-center items-center text-critical">
         {result.error.message}
       </div>
     );
@@ -194,7 +194,7 @@ export default function CheckoutForm({
         </div>
       </RenderIfTrue>
       <RenderIfTrue condition={!!(!stripe || !elements)}>
-        <div className="flex justify-center p-5">
+        <div className="flex justify-center p-3">
           <Spinner width={20} height={20} />
         </div>
       </RenderIfTrue>

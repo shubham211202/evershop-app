@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import './General.scss';
-import Editor from '@components/common/Editor';
+import { Editor } from '@components/common/Editor.js';
 
 export default function CategoryInfo({
   category: { name, description, image }
 }) {
   return (
     <div className="page-width">
-      <div className="mb-4 md:mb-8 category__general">
+      <div className="mb-2 md:mb-5 category__general">
         {image && (
           <img src={image.url} alt={name} className="category__image" />
         )}

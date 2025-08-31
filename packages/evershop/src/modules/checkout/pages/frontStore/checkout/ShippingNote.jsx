@@ -1,5 +1,5 @@
+import Button from '@components/common/Button';
 import { useAppDispatch } from '@components/common/context/app';
-import Button from '@components/common/form/Button';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { toast } from 'react-toastify';
@@ -13,7 +13,7 @@ export default function ShippingNote({
   const [note, setNote] = React.useState(shippingNote);
   const [submitting, setSubmitting] = React.useState(false);
   return showShippingNote ? (
-    <div className="shipping-note mt-8">
+    <div className="shipping-note mt-5">
       <div className="form-field-container null">
         <div className="field-wrapper flex flex-grow">
           <textarea
@@ -28,7 +28,7 @@ export default function ShippingNote({
           <div className="field-border" />
         </div>
       </div>
-      <div className="mt-3">
+      <div className="mt-2">
         <Button
           title="Save"
           variant="primary"
